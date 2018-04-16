@@ -22,7 +22,7 @@ end
 
   get '/account' do
     if !session[:user_id]
-      erb :error
+      erb :error #shows error page if user goes to directly to /account
     else
       erb :account
 
