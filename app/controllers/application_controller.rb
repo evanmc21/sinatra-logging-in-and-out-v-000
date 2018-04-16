@@ -24,7 +24,7 @@ end
     if !session[:user_id]
       erb :error #shows error page if user goes to directly to /account
     else
-      erb :account
+      erb :account #displays account information is user is logged in
 
   end
 
