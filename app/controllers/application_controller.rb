@@ -25,7 +25,7 @@ end
       erb :error #shows error page if user goes to directly to /account
     else
       erb :account #displays account information is user is logged in
-
+    end
   end
 
   get '/logout' do
