@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>"Welcome, <%=@user.username%>!"</title>
+    <title>"Welcome, <%= Helpers.current_user(session).username%>!"</title>
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <h2>Your Balance :<%=@user.balance%> </h2>
+    <% if Helpers.is_logged_in?(session) %>
+    <h2>Your Balance:<%=@user.balance%> </h2>
 
 
     <a href="/sessions/logout">Log Out</a>
